@@ -1,4 +1,3 @@
-'use strict';
 const runSequence = require('run-sequence');
 module.exports = gulp => {
     gulp.task('build', done => {

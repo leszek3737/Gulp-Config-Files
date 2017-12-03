@@ -1,4 +1,3 @@
-'use strict';
 module.exports = {
     glob: {
         src: "./src/**/*",
