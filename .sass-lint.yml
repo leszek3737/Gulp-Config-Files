@@ -16,6 +16,7 @@ options:
 files:
   include: 'sass/**/*.s+(a|c)ss'
   ignore:
+    - 'sass/vendor/**/*.*'
 # Rule Configuration
 rules:
   extends-before-mixins: 2
@@ -23,6 +24,7 @@ rules:
   placeholder-in-extend: 2
   mixins-before-declarations:
     - 2
+    -
       exclude:
         - breakpoint
         - mq
@@ -33,16 +35,20 @@ rules:
   no-important: 2
   hex-notation:
     - 2
+    -
       style: uppercase
   indentation:
     - 4
+    -
       size: 2
   property-sort-order:
     - 1
+    -
       order:
         - display
         - margin
       ignore-custom-properties: true
   variable-for-property:
     - 2
+    -
      
