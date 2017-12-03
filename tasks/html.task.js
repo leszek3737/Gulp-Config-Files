@@ -5,7 +5,7 @@ module.exports = gulp => {
         return gulp.src(config.glob.html)
             .pipe($.htmlReplace({
                 "css": "css/app.css",
-                "jsLib": "js/assets.js",
+                "jsLib": "js/assets.min.js",
                 "js": "js/app.js"
             }))
             .pipe(gulp.dest(config.path.dist));
@@ -14,7 +14,7 @@ module.exports = gulp => {
         return gulp.src(config.glob.html)
             .pipe($.htmlReplace({
                 "css": "css/app.min.css",
-                "jsLib": "js/assets.js",
+                "jsLib": "js/assets.min.js",
                 "js": "js/app.min.js"
             }))
             .pipe($.stripComments())

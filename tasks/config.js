@@ -19,9 +19,7 @@ module.exports = {
         img: './dist/img/',
     },
     concatOrder: {
-        js: [
-        './src/**/*.js'
-    ],
+        js: './src/**/*.js',
         jsLib: [
             "node_modules/jquery/dist/jquery.min.js",
            "node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js",
@@ -30,7 +28,7 @@ module.exports = {
     name: {
         js: "app.js",
         jsMin: "app.min.js",
-        jsMinLib: "assets.js",
+        jsMinLib: "assets.min.js",
         css: "app.css",
         cssMin: "app.min.css",
     }
