@@ -3,15 +3,15 @@ Gotowe do wykorzystania pliki konfikuracyjne do Gulpa.
 ## Funkcjie
 
 ## Instalacja gulpa
-Należy pobrać projekt i przekopiować pliku do swojego projektu (oczywiście oprucz plików .json) oraz zainstalować pakiety wpisując w katalogu twojego projektu:  
+Należy pobrać projekt i przekopiować pliki do swojego projektu (oczywiście oprócz plików .json) oraz zainstalować pakiety wpisując w konsoli w katalogu twojego projektu:
 ```
 npm i -D  gulp gulp-load-plugins run-sequence gulp-load-subtasks gulp-clean  autoprefixer cssnano gulp-sass-glob gulp-sass gulp-postcss gulp-rename gulp-sourcemaps gulp-babel babel-core babel-preset-es2015 babel-preset-es2016 babel-preset-es2017 gulp-dedupe gulp-concat gulp-uglify gulp-html-replace gulp-eslint gulp-htmllint gulp-sass-lint eslint-plugin-css-modules 
 ```
-### Konfiguacjia do twojego projektu
-Przejdz do katalogu tasks i otwóż plik config.js
+### Konfiguracja do twojego projektu
+Przejdź do katalogu tasks i otwórz plik config.js
 
-#### Katalogi weściowe projektu
-W tej sekcji należy w odpowiednie pola wpisać katalgi gdzie znajdują się twoje pliki projektu w sposób podany w tym przykładzie:
+#### Katalogi wejściowe projektu
+W tej sekcji należy w odpowiednie pola wpisać katalogi gdzie znajdują się twoje pliki projektu w sposób podany w tym przykładzie:
 ```
  glob: {
         src: "./src/**/*",
@@ -22,16 +22,16 @@ W tej sekcji należy w odpowiednie pola wpisać katalgi gdzie znajdują się two
         img: './src/img/**/*',
     },
 ```
-#### Konfiguracjia pliku weściowego sass
-w sekcji entryPoint wpisujemy jesdynie plik startowy sass w sposób podany w tym przykładzie:
+#### Konfiguracja pliku weściowego sass
+w sekcji entryPoint wpisujemy jedynie plik startowy sass w sposób podany w tym przykładzie:
 ```
 entryPoint: {
         scss: './src/scss/style.scss'
     },
 ```
 
-#### Konfiguracjia plików wyściowych 
-W sekcji path wpisujemy katalogi wyjściowe projektu  w sposób podany w tym przykładzie:
+#### Konfiguracja plików wyjściowych 
+W sekcji path wpisujemy katalogi wyjściowe projektu w sposób podany w tym przykładzie:
 
 ```
 path: {
@@ -44,7 +44,7 @@ path: {
     },
 ```
 
-#### Konfiguracjia konkatenacji
+#### Konfiguracja konkatenacji
 W tej sekcji wpisujemy pliki javascriptu które mają zostać poddane Konkatenacji w sposób podany w tym przykładzie:
 ```
   concatOrder: {
@@ -56,8 +56,8 @@ W tej sekcji wpisujemy pliki javascriptu które mają zostać poddane Konkatenac
     },
 ```
 
-#### Konfiguracjia nazw plików wyjsciowych 
-W tej sekcji należy podać nazwy plików wyjściowych  w sposób podany w tym przykładzie:
+#### Konfiguracja nazw plików wyjściowych
+W tej sekcji należy podać nazwy plików wyjściowych w sposób podany w tym przykładzie:
 ```
    name: {
         js: "app.js",
