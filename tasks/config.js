@@ -5,6 +5,7 @@ module.exports = {
         js: './src/**/*.js',
         html: './src/**/*.html',
         fonts: './src/fonts/**/*',
+        fontsLib: './node_modules/bootstrap-sass/assets/fonts/bootstrap/**/*',
         img: './src/img/**/*',
     },
     entryPoint: {
@@ -15,6 +16,7 @@ module.exports = {
         js: './dist/js/',
         dist: './dist/',
         fonts: './dist/fonts/',
+        fontsLib: './dist/fonts/bootstrap/',
         vector: './dist/img/',
         img: './dist/img/',
     },
@@ -22,8 +24,8 @@ module.exports = {
         js: './src/**/*.js',
         jsLib: [
             "node_modules/jquery/dist/jquery.min.js",
-           "node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js",
-      ]
+            "node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js",
+        ]
     },
     name: {
         js: "app.js",

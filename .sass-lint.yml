@@ -1,54 +1,67 @@
-#########################
-## Sample Sass Lint File
-#########################
-# Linter Options
+#   Severity
+#     - 0: wyłącznie 
+#     - 1: jako ostrzerzenie
+#     - 2: jako błąd 
 options:
-  # Don't merge default rules
+  # czy korzystać z 
   merge-default-rules: false
-  # Set the formatter to 'html'
+  # ładuj do formatu html 
   formatter: html
-  # Output file instead of logging results
+  # określa plik wyściowy 
   output-file: 'raports/sass-lint.html'
-  # Raise an error if more than 50 warnings are generated
-  max-warnings: 100
-  include: false
-# File Options
-files:
-  include: 'sass/**/*.s+(a|c)ss'
-  ignore:
-    - 'sass/vendor/**/*.*'
+  # maxymalna ilość wyświetlanych błędów  
+  max-warnings: 10
+  
+
 # Rule Configuration
 rules:
-  extends-before-mixins: 2
-  extends-before-declarations: 2
-  placeholder-in-extend: 2
-  mixins-before-declarations:
-    - 2
-    -
-      exclude:
-        - breakpoint
-        - mq
 
-  no-warn: 1
+#nie rozumeim 
+  placeholder-in-extend: 0
+
+
+# deklaracjia mixiny przed 
+  mixins-before-declarations:
+  - 1
+  -
+    exclude: ['grid-media', 'media'] # allow @include grid-media(), @include media();
+
+## zezwól tylko na kolory hex
+  no-color-keywords: 1
+
+  #zabrania używania @debug
   no-debug: 1
+  #zabrani urzywania @warn
+  no-warn: 0
+  #zabrania używania id
   no-ids: 2
-  no-important: 2
-  hex-notation:
-    - 2
-    -
-      style: uppercase
-  indentation:
-    - 4
-    -
-      size: 2
-  property-sort-order:
+# nie pozwala na zostawieniepudtych selektrów 
+  no-empty-rulesets:
     - 1
-    -
-      order:
-        - display
-        - margin
-      ignore-custom-properties: true
-  variable-for-property:
+    #Wymusza zagnieźdzanie 
+  force-element-nesting: 1
+  #Wymusza zagnieźdzanie pseudoelemtów
+  force-pseudo-nesting: 1
+  #wymusz umieszcznie atrybutów w cudzysłowach 
+  attribute-quotes: 1
+#  border-zero: 0
+#  hex-notation: 1
+
+
+  property-units:
     - 2
     -
-     
+      per-property: { font-size: ['rem'] }
+
+#  quotes:
+#    - 1
+#    -
+#      style: single
+
+
+
+  no-misspelled-properties:
+  - 1
+  -
+    'extra-properties':
+    - '-webkit-overflow-scrolling'
