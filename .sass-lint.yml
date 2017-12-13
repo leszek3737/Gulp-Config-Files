@@ -27,6 +27,8 @@ rules:
   no-warn: 0
 #zabrania używania id
   no-ids: 2
+#zabrania używać important
+  no-important: 2
 #nie pozwala na zostawieniepudtych selektrów 
   no-empty-rulesets:
     - 1
@@ -42,7 +44,7 @@ rules:
   property-units:
     - 2
     -
-      per-property: { font-size: ['rem'] }
+      per-property: { font-size: ['rem'], size: ['rem'], }
 #wymusz stosowanie albo pojedyńczych albo podwójnych cudzysłowów
   quotes:
     - 1

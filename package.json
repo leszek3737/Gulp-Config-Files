@@ -24,6 +24,7 @@
     "babel-preset-es2017": "^6.24.1",
     "clean": "^4.0.2",
     "cssnano": "^3.10.0",
+    "eslint-html-reporter": "^0.5.2",
     "eslint-plugin-css-modules": "^2.7.5",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
