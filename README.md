@@ -1,11 +1,20 @@
 # Gulp Config Files by Leszek
-Gotowe do wykorzystania pliki konfikuracyjne do Gulpa.
-## Funkcjie
-
+Gotowe do wykorzystania pliki konfiguracyjne do Gulpa.
+## Funkcje
+1.Budowanie wersji dev i produkcyjnej 
+    * Autoprefixer  
+    * Kopilacja sass 
+    * Transpilacja babel
+    * Konkatenacja plików
+    * Minifikacja plików 
+2. Lint
+    * JS - eslint 
+    * Sass lint
+3. Browser-sync
 ## Instalacja gulpa
 Należy pobrać projekt i przekopiować pliki do swojego projektu (oczywiście oprócz plików .json) oraz zainstalować pakiety wpisując w konsoli w katalogu twojego projektu:
 ```
-npm i -D  gulp gulp-load-plugins run-sequence gulp-load-subtasks gulp-clean  autoprefixer cssnano gulp-sass-glob gulp-sass gulp-postcss gulp-rename gulp-sourcemaps gulp-babel babel-core babel-preset-es2015 babel-preset-es2016 babel-preset-es2017 gulp-dedupe gulp-concat gulp-uglify gulp-html-replace gulp-eslint gulp-htmllint gulp-sass-lint eslint-plugin-css-modules eslint-html-reporter
+npm i -D  gulp gulp-load-plugins run-sequence gulp-load-subtasks gulp-clean  autoprefixer cssnano gulp-sass-glob gulp-sass gulp-postcss gulp-rename gulp-sourcemaps gulp-babel babel-core babel-preset-es2015 babel-preset-es2016 babel-preset-es2017 gulp-dedupe gulp-concat gulp-uglify gulp-html-replace gulp-eslint gulp-htmllint gulp-sass-lint eslint-plugin-css-modules eslint-html-reporter browser-sync
 ```
 ### Konfiguracja do twojego projektu
 Przejdź do katalogu tasks i otwórz plik config.js
@@ -22,7 +31,7 @@ W tej sekcji należy w odpowiednie pola wpisać katalogi gdzie znajdują się tw
         img: './src/img/**/*',
     },
 ```
-#### Konfiguracja pliku weściowego sass
+#### Konfiguracja pliku wejściowego sass
 w sekcji entryPoint wpisujemy jedynie plik startowy sass w sposób podany w tym przykładzie:
 ```
 entryPoint: {
@@ -69,6 +78,17 @@ W tej sekcji należy podać nazwy plików wyjściowych w sposób podany w tym pr
 };
 ```
 
-## To Do
-1. Eslint zapisywany do pliku 
-2. Html lint 
+##  Polecenie 
+
+Budowa wersji dev
+```
+gulp build
+```
+Budowa wersji produkcyjnej
+```
+gulp build::prod
+```
+Uruchomienie linta 
+```
+gulp lint
+```
