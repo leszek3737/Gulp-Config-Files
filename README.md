@@ -2,14 +2,14 @@
 Gotowe do wykorzystania pliki konfiguracyjne do Gulpa.
 ## Funkcje
 1.Budowanie wersji dev i produkcyjnej 
-    - Autoprefixer  
-    - Kopilacja sass 
-    - Transpilacja babel
-    - Konkatenacja plików
-    - Minifikacja plików 
+- Autoprefixer  
+- Kopilacja sass 
+- Transpilacja babel
+- Konkatenacja plików
+- Minifikacja plików 
 2. Lint
-    - JS - eslint 
-    - Sass lint
+- JS - eslint 
+- Sass lint
 3. Browser-sync
 ## Instalacja gulpa
 Należy pobrać projekt i przekopiować pliki do swojego projektu (oczywiście oprócz plików .json) oraz zainstalować pakiety wpisując w konsoli w katalogu twojego projektu:
