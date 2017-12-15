@@ -12,7 +12,7 @@
     },
     "globals": {
         "$": true,
-    }
+    },
     "plugins": [
     "css-modules"
   ],

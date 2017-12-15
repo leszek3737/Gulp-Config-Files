@@ -5,7 +5,7 @@ module.exports = {
         js: './src/**/*.js',
         html: './src/**/*.html',
         fonts: './src/fonts/**/*',
-        fontsLib: './node_modules/bootstrap-sass/assets/fonts/bootstrap/**/*',
+        fontsLib: './../psdToHtml/dpsn-page/node_modules/bootstrap-sass/assets/fonts/bootstrap/**/*',
         img: './src/img/**/*',
     },
     entryPoint: {
