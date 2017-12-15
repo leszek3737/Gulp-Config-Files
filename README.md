@@ -78,7 +78,7 @@ W tej sekcji należy podać nazwy plików wyjściowych w sposób podany w tym pr
 };
 ```
 
-##  Polecenie 
+##  Polecenia 
 
 Budowa wersji dev
 ```
