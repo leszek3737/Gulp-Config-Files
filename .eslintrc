@@ -8,9 +8,11 @@
     "env": {
         "es6": true,
         "node": true,
-        "jquery": true,
         "browser": true,
     },
+    "globals": {
+        "$": true,
+    }
     "plugins": [
     "css-modules"
   ],
