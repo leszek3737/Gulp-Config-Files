@@ -11,6 +11,20 @@ Gotowe do wykorzystania pliki konfiguracyjne do Gulpa.
 - JS - eslint 
 - Sass lint
 3. Browser-sync
+##  Polecenia 
+
+Budowa wersji dev
+```
+gulp build
+```
+Budowa wersji produkcyjnej
+```
+gulp build::prod
+```
+Uruchomienie linta 
+```
+gulp lint
+```
 ## Instalacja gulpa
 Należy pobrać projekt i przekopiować pliki do swojego projektu (oczywiście oprócz plików .json) oraz zainstalować pakiety wpisując w konsoli w katalogu twojego projektu:
 ```
@@ -78,17 +92,5 @@ W tej sekcji należy podać nazwy plików wyjściowych w sposób podany w tym pr
 };
 ```
 
-##  Polecenia 
-
-Budowa wersji dev
-```
-gulp build
-```
-Budowa wersji produkcyjnej
-```
-gulp build::prod
-```
-Uruchomienie linta 
-```
-gulp lint
-```
+## toDoList
+1. Skryp instalacyjny pakiety 
