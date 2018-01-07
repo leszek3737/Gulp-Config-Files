@@ -6,6 +6,7 @@ const fs = require('fs');
 module.exports = gulp => {
     gulp.task('sass', () => {
         return gulp.src(config.entryPoint.scss)
+            .pipe($.sourcemaps.init())
             .pipe($.sassGlob())
             .pipe($.sass().on('error', $.sass.logError))
             .pipe($.postcss([autoprefixer()]))
