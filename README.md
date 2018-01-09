@@ -7,6 +7,7 @@ Gotowe do wykorzystania pliki konfiguracyjne do Gulpa.
 - Transpilacja babel
 - Konkatenacja plików
 - Minifikacja plików 
+- Sourcemaps JS i css(sass)
 2. Lint
 - JS - eslint 
 - Sass lint
@@ -91,6 +92,3 @@ W tej sekcji należy podać nazwy plików wyjściowych w sposób podany w tym pr
     }
 };
 ```
-
-## toDoList
-1. Skryp instalacyjny pakiety 
