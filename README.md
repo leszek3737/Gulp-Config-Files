@@ -14,15 +14,20 @@ Gotowe do wykorzystania pliki konfiguracyjne do Gulpa.
 3. Browser-sync
 ##  Polecenia 
 
-Budowa wersji dev
+####Budowa wersji dev
 ```
 gulp build
 ```
-Budowa wersji produkcyjnej
+####Budowa wersji produkcyjnej
 ```
 gulp build::prod
 ```
-Uruchomienie linta 
+Opcjonalnie uruchomienie czyszczenia zbędnych class css
+```
+gulp cssMin
+```
+
+####Uruchomienie linta 
 ```
 gulp lint
 ```
@@ -91,4 +96,20 @@ W tej sekcji należy podać nazwy plików wyjściowych w sposób podany w tym pr
         cssMin: "app.min.css",
     }
 };
+```
+#### Konfiguracja Wyjątków dla unCss
+W tej sekcji należy podać tablice w sposób podany w tym przykładzie:
+```
+unCssIgnore: [/\.affix/,
+    /\.alert/,
+    /\.close/,
+    /\.collaps/,
+    /\.fade/,
+    /\.has/,
+    /\.help/,
+    /\.in/,
+    /\.modal/,
+    /\.open/,
+    /\.popover/,
+    /\.tooltip/],
 ```
