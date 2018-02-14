@@ -14,11 +14,11 @@ Gotowe do wykorzystania pliki konfiguracyjne do Gulpa.
 3. Browser-sync
 ##  Polecenia 
 
-####Budowa wersji dev
+#### Budowa wersji dev
 ```
 gulp build
 ```
-####Budowa wersji produkcyjnej
+#### Budowa wersji produkcyjnej
 ```
 gulp build::prod
 ```
@@ -27,7 +27,7 @@ Opcjonalnie uruchomienie czyszczenia zbędnych class css
 gulp cssMin
 ```
 
-####Uruchomienie linta 
+#### Uruchomienie linta 
 ```
 gulp lint
 ```
