@@ -26,6 +26,7 @@ gulp.task('build::prod', done => {
         done
     );
 });
+gulp.task('cssMin', ['sass:prodMin']);
 gulp.task('default', done => {
     runSequence(
         "build",
