@@ -8,4 +8,14 @@ module.exports = gulp => {
             })
             .pipe($.clean());
     });
+	 gulp.task('cleanWp', () => {
+        return gulp
+            .src(config.path.wp + '*', {
+                read: false,
+            })
+            .pipe($.clean({
+                force: true
+            }));
+    });
+
 };

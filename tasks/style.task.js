@@ -40,6 +40,45 @@ module.exports = gulp => {
 			.pipe($.rename(config.name.cssMin))
 			.pipe(gulp.dest(config.path.css));
 	});
+	
+	gulp.task('sassWP', () => {
+		return gulp.src(config.entryPoint.scss)
+			.pipe($.sourcemaps.init())
+			.pipe($.sassGlob())
+			.pipe($.sass().on('error', $.sass.logError))
+			.pipe($.postcss([autoprefixer()]))
+			.pipe($.rename(config.name.cssWP))
+			.pipe($.sourcemaps.write())
+			.pipe(gulp.dest(config.path.cssWP));
+	});
+	gulp.task('sassWP:prod', () => {
+		return gulp.src(config.entryPoint.scss)
+			.pipe($.sassGlob())
+			.pipe($.sass().on('error', $.sass.logError))
+			.pipe($.postcss([
+                autoprefixer(),
+                cssnano(),
+                    ]))
+			.pipe($.rename(config.name.cssWP))
+			.pipe(gulp.dest(config.path.cssWP));
+	});
+	gulp.task('sassWP:prodMin', () => {
+		return gulp.src(config.entryPoint.scss)
+			.pipe($.sassGlob())
+			.pipe($.sass().on('error', $.sass.logError))
+			.pipe($.postcss([
+                autoprefixer(),
+                cssnano(),
+                    ]))
+			.pipe($.uncss({
+				html: [config.glob.html],
+				ignore: config.unCssIgnore,
+			}))
+			.pipe($.rename(config.name.cssWP))
+			.pipe(gulp.dest(config.path.cssWP));
+	});
 	gulp.task('style', ['sass']);
 	gulp.task('style:prod', ['sass:prod']);
+	gulp.task('styleWP', ['sassWP']);
+	gulp.task('styleWP:prod', ['sassWP:prod']);
 };

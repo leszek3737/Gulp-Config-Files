@@ -15,6 +15,21 @@ gulp.task('build', done => {
         done
     );
 });
+gulp.task('buildWp', ['buildWp-src','watchWP']);
+gulp.task('buildWp-src', done => {
+    runSequence(
+        'clean', 
+		'cleanWp',[
+        'styleWP',
+        'javascript'
+    ],
+        'php',
+        'copy',
+        'copyToWp',
+        'lint',
+        done
+    );
+});
 gulp.task('build::prod', done => {
     runSequence(
         'clean', [

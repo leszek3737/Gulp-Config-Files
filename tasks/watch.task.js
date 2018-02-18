@@ -13,4 +13,7 @@ module.exports = gulp => {
             done
         );
     })
+	gulp.task('watchWP', () => {
+        gulp.watch(config.glob.src, ['buildWp-src']);
+    });
 }
