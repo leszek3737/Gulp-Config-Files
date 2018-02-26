@@ -5,9 +5,9 @@ $.loadSubtasks('tasks/**/*.task.js', $);
 gulp.task('build', done => {
     runSequence(
         'clean', [
-        'style',
-        'javascript'
-    ],
+			'style',
+			'javascript'
+		],
         'html',
         'copy',
         'browser-sync-reload',
@@ -18,9 +18,9 @@ gulp.task('build', done => {
 gulp.task('build::prod', done => {
     runSequence(
         'clean', [
-      'style:prod',
-      'javascript:prod'
-    ],
+		  	'style:prod',
+		  	'javascript:prod'
+		],
         'html:prod',
         'copy::prod',
         done

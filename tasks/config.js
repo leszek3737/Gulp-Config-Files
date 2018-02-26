@@ -19,6 +19,13 @@ module.exports = {
 		fontsLib: './dist/fonts/bootstrap/',
 		vector: './dist/img/',
 		img: './dist/img/',
+		file: {
+			css: "css/app.css",
+			cssMin: "css/app.min.css",
+			jsLib: "js/assets.min.js",
+			js: "js/app.js",
+			jsMin: "js/app.min.js",
+		},
 	},
 	concatOrder: {
 		js: './src/**/*.js',
