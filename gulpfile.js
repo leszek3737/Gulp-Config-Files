@@ -26,12 +26,18 @@ gulp.task('build::prod', done => {
         done
     );
 });
-gulp.task('cssMin', ['sass:prodMin']);
+gulp.task('build::optimized', ['sass:prodMin']);
 gulp.task('default', done => {
-    runSequence(
-        "build",
-        'browser-sync',
-        'watch',
+	runSequence(
+        'clean', [
+			'style',
+			'javascript'
+		],
+        'html',
+        'copy',
+		'browser-sync',
+		'watch',
+        'lint',
         done
-    )
+    );
 });

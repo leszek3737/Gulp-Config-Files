@@ -22,9 +22,9 @@ gulp build
 ```
 gulp build::prod
 ```
-Opcjonalnie uruchomienie czyszczenia zbędnych class css
+Opcjonalnie uruchomienie optymalizacji:
 ```
-gulp cssMin
+gulp build::optimized
 ```
 
 #### Uruchomienie linta 

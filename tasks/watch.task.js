@@ -19,6 +19,7 @@ module.exports = gulp => {
 		runSequence(
 			'style',
 			'browser-sync-reload',
+			"sass-lint",
 			done
 		);
 	});
@@ -26,6 +27,7 @@ module.exports = gulp => {
 		runSequence(
 			'javascript',
 			'browser-sync-reload',
+			"javascript-lint",
 			done
 		);
 	});
