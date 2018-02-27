@@ -32,9 +32,9 @@ gulp cssMin
 gulp lint
 ```
 ## Instalacja gulpa
-Należy pobrać projekt i przekopiować pliki do swojego projektu (oczywiście oprócz plików .json) oraz zainstalować pakiety wpisując w konsoli w katalogu twojego projektu:
+Należy pobrać projekt i przekopiować pliki do swojego projektuoraz zainstalować pakiety wpisując w konsoli w katalogu twojego projektu:
 ```
-npm i -D  gulp gulp-load-plugins run-sequence gulp-load-subtasks gulp-clean  autoprefixer cssnano gulp-sass-glob gulp-sass gulp-postcss gulp-rename gulp-sourcemaps gulp-babel babel-core babel-preset-es2015 babel-preset-es2016 babel-preset-es2017 gulp-dedupe gulp-concat gulp-uglify gulp-html-replace gulp-eslint gulp-htmllint gulp-sass-lint eslint-plugin-css-modules eslint-html-reporter browser-sync gulp-strip-comments gulp-imagemin
+npm i
 ```
 ### Konfiguracja do twojego projektu
 Przejdź do katalogu tasks i otwórz plik config.js
@@ -74,7 +74,7 @@ path: {
 ```
 
 #### Konfiguracja konkatenacji
-W tej sekcji wpisujemy pliki javascriptu które mają zostać poddane Konkatenacji w sposób podany w tym przykładzie:
+W tej sekcji wpisujemy pliki javascriptowe, które mają zostać połączone w jeden w sposób podany w tym przykładzie:
 ```
   concatOrder: {
         js: './src/**/*.js',

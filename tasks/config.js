@@ -1,6 +1,7 @@
 module.exports = {
 	glob: {
 		src: "./src/**/*",
+		srcOthers: "./src/**/*.{png,jpg,svg,ttf}",
 		scss: './src/**/*.scss',
 		js: './src/**/*.js',
 		html: './src/**/*.html',
