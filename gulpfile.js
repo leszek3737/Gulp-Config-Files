@@ -3,41 +3,41 @@ const $ = require('gulp-load-plugins')();
 const runSequence = require('run-sequence');
 $.loadSubtasks('tasks/**/*.task.js', $);
 gulp.task('build', done => {
-    runSequence(
-        'clean', [
+	runSequence(
+		'clean', [
 			'style',
 			'javascript'
 		],
-        'html',
-        'copy',
-        'browser-sync-reload',
-        'lint',
-        done
-    );
+		'html',
+		'copy',
+		'browser-sync-reload',
+		'lint',
+		done
+	);
 });
 gulp.task('build::prod', done => {
-    runSequence(
-        'clean', [
+	runSequence(
+		'clean', [
 		  	'style:prod',
 		  	'javascript:prod'
 		],
-        'html:prod',
-        'copy::prod',
-        done
-    );
+		'html:prod',
+		'copy::prod',
+		done
+	);
 });
 gulp.task('build::optimized', ['sass:prodMin']);
 gulp.task('default', done => {
 	runSequence(
-        'clean', [
+		'clean', [
 			'style',
 			'javascript'
 		],
-        'html',
-        'copy',
+		'html',
+		'copy',
 		'browser-sync',
 		'watch',
-        'lint',
-        done
-    );
+		'lint',
+		done
+	);
 });

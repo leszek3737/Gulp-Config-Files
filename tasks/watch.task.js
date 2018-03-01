@@ -3,17 +3,17 @@ const runSequence = require('run-sequence');
 module.exports = gulp => {
 	gulp.task('watch', () => {
 		gulp.watch(config.glob.scss, [
-        'watch-style',
-      ]);
+        	'watch-style',
+      	]);
 		gulp.watch(config.glob.js, [
-        'watch-javascript',
-      ]);
+			'watch-javascript',
+      	]);
 		gulp.watch(config.glob.html, [
-        'watch-html',
-      ]);
+			'watch-html',
+		  ]);
 		gulp.watch(config.glob.srcOthers, [
-        'watch-others',
-      ]);
+			'watch-others',
+		  ]);
 	});
 	gulp.task('watch-style', done => {
 		runSequence(
