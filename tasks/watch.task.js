@@ -8,13 +8,19 @@ module.exports = gulp => {
 		gulp.watch(config.glob.js, [
 			'watch-javascript',
       	]);
-		gulp.watch(config.glob.html, [
+		gulp.watch(config.glob.content, [
 			'watch-html',
 		  ]);
 		gulp.watch(config.glob.srcOthers, [
 			'watch-others',
 		  ]);
 	});
+	gulp.task('watchWP', () => {
+		gulp.watch(config.glob.dist, [
+        	'copyWP',
+      	]);
+	});
+	
 	gulp.task('watch-style', done => {
 		runSequence(
 			'style',

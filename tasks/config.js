@@ -4,7 +4,7 @@ module.exports = {
 		srcOthers: "./src/**/*.{png,jpg,svg,ttf}",
 		scss: './src/**/*.scss',
 		js: './src/**/*.js',
-		html: './src/**/*.html',
+		content: './src/**/*.html',
 		fonts: './src/fonts/**/*',
 		fontsLib: './node_modules/bootstrap-sass/assets/fonts/bootstrap/**/*',
 		img: './src/img/**/*',
@@ -20,6 +20,7 @@ module.exports = {
 		fontsLib: './dist/fonts/bootstrap/',
 		vector: './dist/img/',
 		img: './dist/img/',
+		wp: './../../wordpress/apps/wordpress/htdocs/wp-content/themes/myTherme/',
 		file: {
 			css: "./css/app.css",
 			cssMin: "./css/app.min.css",
@@ -31,10 +32,10 @@ module.exports = {
 	concatOrder: {
 		js: './src/**/*.js',
 		jsLib: [
-            "./node_modules/jquery/dist/jquery.min.js",
-            "./node_modules/popper.js/dist/umd/popper.min.js",
-            "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-        ]
+					"./node_modules/jquery/dist/jquery.min.js",
+					"./node_modules/popper.js/dist/umd/popper.min.js",
+					"./node_modules/bootstrap/dist/js/bootstrap.min.js",
+				]
 	},
 	name: {
 		js: "app.js",
@@ -55,4 +56,31 @@ module.exports = {
     /\.open/,
     /\.popover/,
     /\.tooltip/],
+	wp: {
+		glob: {
+			content: './src/**/*.php',
+		},
+		path: {
+			css: "./dist/",
+			file: {
+				css: "./style.css",
+				cssMin: "./style.css",
+				jsLib: "./js/assets.min.js",
+				js: "./js/app.js",
+				jsMin: "./js/app.min.js",
+			}
+		},
+		name: {
+			css: "style.css",
+		},
+		browsersync: {
+			proxy: "localhost:8080"
+		},
+	},
+	browsersync: {
+		server: {
+			baseDir: './dist/',
+		},
+		stream: true,
+	},
 };
