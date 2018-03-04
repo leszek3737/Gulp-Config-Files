@@ -16,12 +16,14 @@ gulp.task('build::prod', done => {
 gulp.task('build:WP', done => {
 	runSequence(
 		'changeVariableForWP',
-		'clean', [
+		'clean',
+		'cleanWp',[
 			'style',
 			'javascript'
 		],
 		'html',
 		'copy',
+		'copyToWp',
 		'browser-sync',
 		'watch',
 		'lint',

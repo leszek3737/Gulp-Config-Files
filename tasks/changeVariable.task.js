@@ -11,5 +11,6 @@ module.exports = gulp => {
 		config.path.file.jsLib = config.wp.path.file.jsLib;
 		config.name.css = config.wp.name.css;
 		config.browsersync = config.wp.browsersync;
+		config.wp.on = true;
     });
 };

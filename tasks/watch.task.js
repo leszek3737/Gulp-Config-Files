@@ -15,15 +15,11 @@ module.exports = gulp => {
 			'watch-others',
 		  ]);
 	});
-	gulp.task('watchWP', () => {
-		gulp.watch(config.glob.dist, [
-        	'copyWP',
-      	]);
-	});
-	
+
 	gulp.task('watch-style', done => {
 		runSequence(
 			'style',
+			'watch-wp',
 			'browser-sync-reload',
 			"sass-lint",
 			done
@@ -32,6 +28,7 @@ module.exports = gulp => {
 	gulp.task('watch-javascript', done => {
 		runSequence(
 			'javascript',
+			'watch-wp',
 			'browser-sync-reload',
 			"javascript-lint",
 			done
@@ -40,6 +37,7 @@ module.exports = gulp => {
 	gulp.task('watch-html', done => {
 		runSequence(
 			'html',
+			'watch-wp',
 			'browser-sync-reload',
 			done
 		);
@@ -49,8 +47,19 @@ module.exports = gulp => {
 			'html',
 			'javascript',
 			'style',
+			'watch-wp',
 			'browser-sync-reload',
 			done
 		);
 	});
+	gulp.task('watch-wp', done => {
+		if (config.wp.on === true) {
+			runSequence(
+				'cleanWp',
+				'copyToWp',
+				done
+			)
+		}
+		done
+	})
 }

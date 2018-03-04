@@ -1,6 +1,7 @@
 module.exports = {
 	glob: {
 		src: "./src/**/*",
+		dist: "./dist/**/*",
 		srcOthers: "./src/**/*.{png,jpg,svg,ttf}",
 		scss: './src/**/*.scss',
 		js: './src/**/*.js',
@@ -57,6 +58,7 @@ module.exports = {
     /\.popover/,
     /\.tooltip/],
 	wp: {
+		on: false,
 		glob: {
 			content: './src/**/*.php',
 		},
