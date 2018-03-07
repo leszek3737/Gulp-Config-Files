@@ -13,6 +13,22 @@ gulp.task('build::prod', done => {
 		done
 	);
 });
+
+gulp.task('build:WP:prod', done => {
+	runSequence(
+		'changeVariableForWP',
+		'clean',
+		'cleanWp',[
+		  	'style:prod',
+		  	'javascript:prod'
+		],
+		'html:prod',
+		'copy::prod',
+		'copyToWp',
+		done
+	);
+});
+
 gulp.task('build:WP', done => {
 	runSequence(
 		'changeVariableForWP',

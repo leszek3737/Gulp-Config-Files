@@ -27,8 +27,6 @@ module.exports = gulp => {
 	);
 	gulp.task(
 		'html:prod', [
-      'javascript:prod',
-      'style:prod',
       'inject-assets:prod',
     ]
 	);
