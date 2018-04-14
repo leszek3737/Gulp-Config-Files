@@ -16,7 +16,11 @@ Gotowe do wykorzystania pliki konfiguracyjne do Gulpa.
 
 #### Budowa wersji dev
 ```
-gulp build
+gulp
+```
+#### Budowa wersji dev
+```
+gulp build::WP
 ```
 #### Budowa wersji produkcyjnej
 ```
@@ -97,6 +101,39 @@ W tej sekcji należy podać nazwy plików wyjściowych w sposób podany w tym pr
     }
 };
 ```
+#### Konfiguracja pod Wordpress 
+Robimy analogicznie:
+```
+wp: {
+		on: false,
+		glob: {
+			content: './src/**/*.php',
+		},
+		path: {
+			css: "./dist/",
+			file: {
+				css: "./style.css",
+				cssMin: "./style.css",
+				jsLib: "./js/assets.min.js",
+				js: "./js/app.js",
+				jsMin: "./js/app.min.js",
+			}
+		},
+		name: {
+			css: "style.css",
+		},
+		browsersync: {
+			proxy: "localhost:8080"
+		},
+	},
+	browsersync: {
+		server: {
+			baseDir: './dist/',
+		},
+		stream: true,
+	},
+```
+
 #### Konfiguracja Wyjątków dla unCss
 W tej sekcji należy podać tablice w sposób podany w tym przykładzie:
 ```
