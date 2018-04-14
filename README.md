@@ -18,7 +18,7 @@ Gotowe do wykorzystania pliki konfiguracyjne do Gulpa.
 ```
 gulp
 ```
-#### Budowa wersji dev
+#### Budowa wersji dev dla Wordpressa 
 ```
 gulp build::WP
 ```
