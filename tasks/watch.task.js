@@ -53,13 +53,12 @@ module.exports = gulp => {
 		);
 	});
 	gulp.task('watch-wp', done => {
-		if (config.wp.on === true) {
+		if (config.wp.on) {
 			runSequence(
 				'cleanWp',
 				'copyToWp',
 				done
 			)
 		}
-		done
 	})
 }

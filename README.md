@@ -105,32 +105,26 @@ W tej sekcji należy podać nazwy plików wyjściowych w sposób podany w tym pr
 Robimy analogicznie:
 ```
 wp: {
-		on: false,
-		glob: {
-			content: './src/**/*.php',
-		},
-		path: {
-			css: "./dist/",
-			file: {
-				css: "./style.css",
-				cssMin: "./style.css",
-				jsLib: "./js/assets.min.js",
-				js: "./js/app.js",
-				jsMin: "./js/app.min.js",
-			}
-		},
-		name: {
-			css: "style.css",
-		},
-		browsersync: {
-			proxy: "localhost:8080"
-		},
-	},
-	browsersync: {
-		server: {
-			baseDir: './dist/',
-		},
-		stream: true,
+        on: false,
+        glob: {
+            content: './src/**/*.php',
+        },
+        path: {
+            css: "./dist/",
+            file: {
+                css: "./style.css",
+                cssMin: "./style.css",
+                jsLib: "./js/assets.min.js",
+                js: "./js/app.js",
+                jsMin: "./js/app.min.js",
+            }
+        },
+        name: {
+            css: "style.css",
+        },
+        browsersync: {
+            proxy: "localhost:8080"
+        },
 	},
 ```
 
