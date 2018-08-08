@@ -6,7 +6,7 @@ module.exports = gulp => {
 				.pipe($.htmlReplace({
 					"css": config.path.file.css,
 					"jsLib": config.path.file.jsLib,
-					"jsLib": config.path.file.js,
+					"js": config.path.file.js,
 				}))
 				.pipe(gulp.dest(config.path.dist));
 	});
@@ -15,7 +15,7 @@ module.exports = gulp => {
 				.pipe($.htmlReplace({
 					"css": config.path.file.cssMin,
 					"jsLib": config.path.file.jsLib,
-					"jsLib": config.path.file.jsMin,
+					"js": config.path.file.jsMin,
 				}))
 				.pipe($.stripComments())
 				.pipe(gulp.dest(config.path.dist));
